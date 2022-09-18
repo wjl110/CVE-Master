@@ -1,0 +1,42 @@
+/*shows the stars side by side, centered, and in reverse order than the HMTL*/
+.emoji {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+/*hides the radio buttons*/
+.emoji > input {
+    display: none;
+}
+
+
+
+/*style the empty stars, sets position:relative as base for pseudo-elements*/
+.emoji > label {
+    position: relative;
+    width: 1.1em;
+    font-size: 2em;
+    color: #FFD700;
+    cursor: pointer;
+}
+
+/*overlays a filled start character on the selected element and all previous siblings*/
+.ig-emoji.active {
+    border: 1px solid black;
+}
+
+#emoji-info {
+    font-size: 14px;
+    height: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}

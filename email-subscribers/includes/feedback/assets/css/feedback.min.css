@@ -1,0 +1,59 @@
+.ig-es-feedback-button {
+    height: 40px;
+    border: solid 3px #CCCCCC;
+    background: #333;
+    width: 100px;
+    line-height: 32px;
+    -webkit-transform: rotate(-90deg);
+    font-weight: 600;
+    color: white;
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    text-align: center;
+    font-size: 17px;
+    position: fixed;
+    right: -40px;
+    top: 45%;
+    font-family: "Roboto", helvetica, arial, sans-serif;
+    z-index: 999;
+    cursor: pointer;
+}
+
+
+.ig-powered-by {
+    font-size: 12px;
+}
+
+/* General Feedback Form */
+.ig-general-feedback .ig-feedback-data-name {
+    width: 50%;
+    float: left;
+}
+
+.ig-general-feedback .ig-feedback-data-email {
+    width: 50%;
+    float: left;
+}
+
+.ig-general-feedback .ig-feedback-data-email input,
+.ig-general-feedback .ig-feedback-data-name input,
+.email-subscribers_page_es_settings .ig-general-feedback .ig-feedback-data-email input,
+.email-subscribers_page_es_settings .ig-general-feedback .ig-feedback-data-name input {
+    width: 84%;
+}
+
+.ig-general-feedback label {
+    display: inline-block;
+    margin-bottom: 3px;
+    color: #484848;
+}
+
+#swal2-content {
+    text-align: left;
+}
+
+.email-subscribers_page_es_settings .ig-feedback-data-message textarea, .ig-feedback-data-message textarea {
+    height: 200px;
+    width: 92%
+}

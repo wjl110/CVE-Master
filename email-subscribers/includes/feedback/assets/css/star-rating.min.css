@@ -1,0 +1,52 @@
+/*shows the stars side by side, centered, and in reverse order than the HMTL*/
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+/*hides the radio buttons*/
+.rating > input{ display:none;}
+
+/*style the empty stars, sets position:relative as base for pseudo-elements*/
+.rating > label {
+    position: relative;
+    width: 1.1em;
+    font-size: 2em;
+    color: #FFD700;
+    cursor: pointer;
+}
+
+/* sets filled star pseudo-elements */
+.rating > label::before{
+    content: "\2605";
+    position: absolute;
+    opacity: 0;
+}
+/*overlays a filled start character to the hovered element and all previous siblings*/
+.rating > label:hover:before,
+.rating > label:hover ~ label:before {
+    opacity: 1 !important;
+}
+
+/*overlays a filled start character on the selected element and all previous siblings*/
+.rating > input:checked ~ label:before{
+    opacity:1;
+}
+
+/*when an element is selected and pointer re-enters the rating container, selected rate and siblings get semi transparent, as reminder of current selection*/
+.rating:hover > input:checked ~ label:before{ opacity: 0.4; }
+
+.rating > input[type=radio]:checked+label:before {
+    color: #FFD700;
+}
+
+.ig-feedback-title {
+    font-size: 20px;
+    line-height: 1.5em;
+    margin: 0em 0;
+}
+@media only screen and (max-width: 600px) {
+    h1{font-size: 14px;}
+    p{font-size: 12px;}
+}
